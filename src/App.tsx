@@ -56,7 +56,7 @@ export default function App() {
       />
 
       <main className="flex-1">
-        {/* Hero Section with Dual Wallpaper (Landing page.jpg / Landing page mobile.jpg) */}
+        {/* Hero Section with High-Resolution Wallpaper (Landing page.jpg) */}
         <Hero
           onOpenQuoteModal={() => handleOpenQuoteModal()}
           onExploreClick={() => scrollToSection('products')}

@@ -2,7 +2,6 @@ import React from 'react';
 import { Shield, Settings, Link as LinkIcon, Leaf, Phone, ArrowDown, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/products';
 import wallpaperDesktop from '../assets/images/Landing page.jpg';
-import wallpaperMobile from '../assets/images/Landing page mobile.jpg';
 
 interface HeroProps {
   onOpenQuoteModal: () => void;
@@ -11,51 +10,32 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onExploreClick }) => {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-start items-center pt-16 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-3 sm:px-6 overflow-hidden">
-      {/* Responsive Background Wallpaper:
-          - Uses 'Landing page mobile.jpg' on screens < 768px
-          - Uses 'Landing page.jpg' on screens >= 768px
+    <section id="hero" className="relative min-h-screen flex flex-col justify-start items-center pt-16 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-3 sm:px-6 overflow-hidden bg-[#09150e]">
+      {/* High-Resolution Landscape Wallpaper (Landing page.jpg):
+          - Provides crystal-clear 1376x768 definition across both mobile and desktop
+          - Contained within an optimized viewport backdrop so it is zoomed out, sharp, and high quality
       */}
-      <div className="absolute inset-0 z-0">
-        <picture>
-          <source media="(max-width: 767px)" srcSet={wallpaperMobile} />
-          <source media="(min-width: 768px)" srcSet={wallpaperDesktop} />
-          <img
-            src={wallpaperDesktop}
-            alt="Van Wyk Krippe Livestock Pasture at Golden Hour"
-            className="w-full h-full object-cover object-top sm:object-center"
-            referrerPolicy="no-referrer"
-            onError={(e) => {
-              // Fallback if space-encoded filename behaves differently on certain static hosts
-              const target = e.currentTarget;
-              if (!target.src.includes('landing-page')) {
-                target.src = './landing-page.jpg';
-              }
-            }}
-          />
-        </picture>
-
-        {/* Clear transparent overlay allowing the background wallpaper and its embedded logo to shine through */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#09150e]/95 pointer-events-none" />
-      </div>
-
-      {/* Spacious viewing window dedicated to viewing the wallpaper and its embedded logo clearly on mobile and desktop */}
-      <div className="w-full min-h-[66vh] sm:min-h-[42vh] md:min-h-[46vh] pointer-events-none flex flex-col justify-end items-center pb-3" aria-hidden="true">
-        {/* Subtle indicator on mobile hinting the content is right below the artwork */}
-        <button
-          onClick={() => {
-            const el = document.getElementById('hero-content');
-            el?.scrollIntoView({ behavior: 'smooth' });
+      <div className="absolute top-0 left-0 right-0 h-[72vh] sm:h-[88vh] lg:h-full z-0 overflow-hidden pointer-events-none">
+        <img
+          src={wallpaperDesktop}
+          alt="Van Wyk Krippe Livestock Pasture at Golden Hour"
+          className="w-full h-full object-cover object-top sm:object-center transform scale-[0.98] sm:scale-100 origin-top"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            // Fallback if space-encoded filename behaves differently on certain static hosts
+            const target = e.currentTarget;
+            if (!target.src.includes('landing-page')) {
+              target.src = './landing-page.jpg';
+            }
           }}
-          className="sm:hidden flex flex-col items-center animate-bounce text-[#e8ca6b] pointer-events-auto cursor-pointer pb-1 group"
-          aria-label="Scroll down to view details"
-        >
-          <span className="text-[10px] tracking-[0.25em] font-cinzel uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-            Scroll to explore
-          </span>
-          <ArrowDown className="w-4 h-4 mt-0.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] group-hover:translate-y-1 transition-transform" />
-        </button>
+        />
+
+        {/* Seamless transparent overlay allowing the artwork to shine through, fading smoothly to dark farm green */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent via-50% to-[#09150e] pointer-events-none" />
       </div>
+
+      {/* Spacious viewing window dedicated to viewing the wallpaper and its embedded logo clearly */}
+      <div className="w-full min-h-[46vh] sm:min-h-[42vh] md:min-h-[46vh] pointer-events-none" aria-hidden="true" />
 
       {/* Main Content Area: Positioned gracefully below the background logo and brand text */}
       <div id="hero-content" className="relative z-20 max-w-5xl mx-auto text-center flex flex-col items-center justify-center px-2 sm:px-4 w-full mt-2 sm:mt-0">
