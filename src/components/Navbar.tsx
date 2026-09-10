@@ -112,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal, onNavigate }) 
               className="flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-gradient-to-r from-[#c59e47] via-[#e8ca6b] to-[#a57a2a] text-[#0e1f15] shadow-md hover:brightness-110 active:scale-98 transition-all cursor-pointer font-cinzel"
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Get Farm Quote</span>
+              <span>Get Quote</span>
             </button>
           </div>
 
@@ -120,9 +120,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal, onNavigate }) 
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => onOpenQuoteModal()}
-              className="px-3 py-1.5 text-xs font-semibold rounded bg-[#c59e47] text-[#0e1f15] font-cinzel"
+              className="px-2.5 py-1.5 text-xs font-semibold rounded bg-[#c59e47] text-[#0e1f15] font-cinzel tracking-wider"
             >
-              Quote
+              Get Quote
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal, onNavigate }) 
               }}
               className="w-full py-3 text-center font-cinzel font-bold text-sm uppercase tracking-wider rounded bg-gradient-to-r from-[#c59e47] via-[#e8ca6b] to-[#a57a2a] text-[#0e1f15]"
             >
-              Request a Farm Quote
+              Get Quote
             </button>
 
             <div className="grid grid-cols-2 gap-2 pt-2 text-xs">

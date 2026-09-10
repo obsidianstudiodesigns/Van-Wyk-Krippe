@@ -267,7 +267,7 @@ export const CalculatorSection: React.FC<CalculatorSectionProps> = ({
                 onClick={handleApply}
                 className="w-full py-3.5 px-6 rounded-xl font-cinzel font-bold text-xs sm:text-sm uppercase tracking-wider text-[#0c1b12] bg-gradient-to-r from-[#c59e47] via-[#e8ca6b] to-[#a57a2a] hover:brightness-110 active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg"
               >
-                <span>Add {recommendedQuantity} Troughs to Farm Quote</span>
+                <span>Add {recommendedQuantity} Troughs to Quote</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 

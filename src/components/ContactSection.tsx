@@ -214,7 +214,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-[#c59e47]/40 shadow-xl">
             <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#14261b] mb-2 flex items-center gap-2">
               <span className="w-2 h-2 rotate-45 bg-[#c59e47]" />
-              Request Official Farm Quote
+              Get Quote
             </h3>
             <p className="text-xs sm:text-sm text-neutral-600 mb-6">
               Complete the quick form below. You can send it directly via email or submit via instant WhatsApp to Frans.

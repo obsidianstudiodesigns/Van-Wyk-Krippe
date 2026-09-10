@@ -11,7 +11,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onExploreClick }) => {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-between items-center pt-24 sm:pt-28 pb-12 sm:pb-16 px-3 sm:px-6 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-start items-center pt-16 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-3 sm:px-6 overflow-hidden">
       {/* Responsive Background Wallpaper:
           - Uses 'Landing page mobile.jpg' on screens < 768px
           - Uses 'Landing page.jpg' on screens >= 768px
@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onExploreClick }) 
           <img
             src={wallpaperDesktop}
             alt="Van Wyk Krippe Livestock Pasture at Golden Hour"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top sm:object-center"
             referrerPolicy="no-referrer"
             onError={(e) => {
               // Fallback if space-encoded filename behaves differently on certain static hosts
@@ -39,11 +39,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onExploreClick }) 
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#09150e]/95 pointer-events-none" />
       </div>
 
-      {/* Spacious viewing window dedicated to viewing the wallpaper and its embedded logo clearly */}
-      <div className="w-full flex-1 min-h-[34vh] sm:min-h-[42vh] md:min-h-[48vh] pointer-events-none" aria-hidden="true" />
+      {/* Spacious viewing window dedicated to viewing the wallpaper and its embedded logo clearly on mobile and desktop */}
+      <div className="w-full min-h-[66vh] sm:min-h-[42vh] md:min-h-[46vh] pointer-events-none flex flex-col justify-end items-center pb-3" aria-hidden="true">
+        {/* Subtle indicator on mobile hinting the content is right below the artwork */}
+        <button
+          onClick={() => {
+            const el = document.getElementById('hero-content');
+            el?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="sm:hidden flex flex-col items-center animate-bounce text-[#e8ca6b] pointer-events-auto cursor-pointer pb-1 group"
+          aria-label="Scroll down to view details"
+        >
+          <span className="text-[10px] tracking-[0.25em] font-cinzel uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+            Scroll to explore
+          </span>
+          <ArrowDown className="w-4 h-4 mt-0.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] group-hover:translate-y-1 transition-transform" />
+        </button>
+      </div>
 
-      {/* Main Content Area: Spaced nicely below the background logo */}
-      <div className="relative z-20 max-w-5xl mx-auto text-center flex flex-col items-center justify-center px-2 sm:px-4 w-full">
+      {/* Main Content Area: Positioned gracefully below the background logo and brand text */}
+      <div id="hero-content" className="relative z-20 max-w-5xl mx-auto text-center flex flex-col items-center justify-center px-2 sm:px-4 w-full mt-2 sm:mt-0">
         {/* Core Description Quote */}
         <p className="max-w-2xl text-sm sm:text-base md:text-lg text-neutral-100 font-light leading-relaxed my-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           We are proud to bring practical, durable and thoughtfully designed feeding solutions to the livestock industry — built with the demands of the farm in mind.
@@ -109,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onExploreClick }) 
             onClick={onOpenQuoteModal}
             className="w-full sm:w-auto px-7 py-3.5 rounded font-cinzel font-bold text-xs sm:text-sm uppercase tracking-widest text-[#0c1b12] bg-gradient-to-r from-[#d4af37] via-[#e8ca6b] to-[#c59e47] shadow-xl hover:brightness-110 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2 border border-[#f3dc98]"
           >
-            <span>Request Farm Quote</span>
+            <span>Get Quote</span>
             <ChevronRight className="w-4 h-4" />
           </button>
 

@@ -95,7 +95,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
         </div>
 
         <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#14261b] mb-2">
-          Request a Farm Quote
+          Get Quote
         </h3>
         <p className="text-xs text-neutral-600 mb-6">
           Direct pricing with transport options across the Free State and South Africa.

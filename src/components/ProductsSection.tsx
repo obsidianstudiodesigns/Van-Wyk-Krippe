@@ -168,7 +168,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onSelectProduc
                     onClick={() => onSelectProductForQuote(product)}
                     className="w-full py-2.5 px-4 rounded text-xs font-cinzel font-bold uppercase tracking-wider text-[#0e1f15] bg-gradient-to-r from-[#c59e47] via-[#e8ca6b] to-[#a57a2a] hover:brightness-110 active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
-                    <span>Request Farm Quote</span>
+                    <span>Get Quote</span>
                     <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
