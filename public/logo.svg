@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="35%" stop-color="#C59E47" />
+      <stop offset="70%" stop-color="#E8CA6B" />
+      <stop offset="100%" stop-color="#A57A2A" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E382B" />
+      <stop offset="100%" stop-color="#11241A" />
+    </linearGradient>
+  </defs>
+
+  <!-- W Emblem -->
+  <g transform="translate(250, 150) scale(0.95)">
+    <!-- Left Green Branch of W -->
+    <path d="M-105,-70 L-95,-70 L-50,60 L-35,60 L-68,-65 L-55,-65 L-55,-70 L-105,-70 Z" fill="url(#greenGrad)" />
+    
+    <!-- Central Overlapping Gold V -->
+    <path d="M-45,-25 L-5,70 L10,70 L55,-35 L45,-35 L4,-20 L-40,-25 Z" fill="url(#goldGrad)" />
+    
+    <!-- Left Gold Slant Bar -->
+    <path d="M-115,-30 L-75,65 L-60,65 L-95,-30 Z" fill="url(#goldGrad)" opacity="0.9" />
+
+    <!-- Right Gold Branch with Bull Horn Silhouette -->
+    <!-- Upward stroke of W that terminates in bull silhouette -->
+    <path d="M-5,70 L65,-55 C70,-65 80,-75 95,-75 C100,-75 105,-70 102,-65 C98,-60 88,-55 82,-45 C80,-40 85,-38 90,-35 C88,-30 80,-30 75,-35 C70,-25 72,-15 70,0 L15,70 Z" fill="url(#goldGrad)" />
+
+    <!-- Delicate Bull Head Fine Line Contour (from logo.jpg) -->
+    <path d="M60,-55 C75,-78 95,-82 108,-75 C112,-72 108,-67 102,-66 C92,-64 82,-58 84,-48 C85,-43 92,-41 94,-36 C92,-32 85,-33 78,-38 C75,-25 76,-10 74,5" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Divider with central diamond -->
+  <g transform="translate(250, 275)">
+    <line x1="-160" y1="0" x2="-20" y2="0" stroke="#C59E47" stroke-width="1.5" opacity="0.85" />
+    <polygon points="0,-6 6,0 0,6 -6,0" fill="#C59E47" />
+    <line x1="20" y1="0" x2="160" y2="0" stroke="#C59E47" stroke-width="1.5" opacity="0.85" />
+  </g>
+
+  <!-- Typography -->
+  <!-- VAN WYK -->
+  <text x="250" y="335" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="44" font-weight="700" letter-spacing="10" fill="#152B1E" text-anchor="middle">VAN WYK</text>
+
+  <!-- KRIPPE with flanking accent lines -->
+  <g transform="translate(250, 375)">
+    <line x1="-140" y1="-5" x2="-80" y2="-5" stroke="#C59E47" stroke-width="1.2" opacity="0.85" />
+    <text x="0" y="0" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="22" font-weight="600" letter-spacing="8" fill="#152B1E" text-anchor="middle">KRIPPE</text>
+    <line x1="80" y1="-5" x2="140" y2="-5" stroke="#C59E47" stroke-width="1.2" opacity="0.85" />
+  </g>
+
+  <!-- LIVESTOCK SOLUTIONS -->
+  <text x="250" y="425" font-family="'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" letter-spacing="8" fill="#152B1E" text-anchor="middle" opacity="0.9">LIVESTOCK SOLUTIONS</text>
+</svg>

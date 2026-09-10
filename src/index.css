@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --color-gold-primary: #c59e47;
+  --color-gold-light: #e6c875;
+  --color-gold-dark: #9a752b;
+  --color-green-primary: #152b1e;
+  --color-green-deep: #0e1e15;
+  --color-sand-bg: #fbf9f5;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #1e2922;
+  background-color: #fbf9f5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+}
+
+.font-script {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Luxury gold gradients and borders */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #c59e47 35%, #e8ca6b 70%, #a57a2a 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #dfbd69 0%, #c59e47 45%, #f3dc98 75%, #a87d2c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(197, 158, 71, 0.35);
+}
+
+.border-gold-glow {
+  border-color: #c59e47;
+  box-shadow: 0 0 15px rgba(197, 158, 71, 0.15);
+}
+
+/* Frame accents modeled after the luxury gold border in the flyers */
+.gold-frame {
+  position: relative;
+}
+.gold-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(197, 158, 71, 0.4);
+  pointer-events: none;
+  z-index: 10;
+}
+

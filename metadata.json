@@ -1,0 +1,6 @@
+{
+  "name": "Van Wyk Krippe",
+  "description": "Durable, reliable feeding and water troughs built for South African farms. Practical agricultural livestock solutions designed to last.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
