@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { Phone, Mail, MapPin, Menu, X, MessageSquare, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Phone, Menu, X, MessageSquare, ShieldCheck, ChevronRight } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/products';
 
 interface NavbarProps {
@@ -14,7 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal, onNavigate }) 
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 30) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,50 +31,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal, onNavigate }) 
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top Agricultural Direct Contact Bar */}
-      <div className="bg-[#0e1f15] text-[#d6c7a1] text-xs py-1.5 px-4 border-b border-[#c59e47]/20">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <MapPin className="w-3.5 h-3.5 text-[#c59e47]" />
-              <span className="hidden sm:inline">Industria, Kroonstad:</span> No. 32 9de Weg
-            </span>
-            <span className="hidden md:inline-block text-[#c59e47]/40">|</span>
-            <span className="hidden md:flex items-center gap-1.5">
-              <Mail className="w-3.5 h-3.5 text-[#c59e47]" />
-              <a href={`mailto:${COMPANY_DETAILS.email}`} className="hover:underline hover:text-white">
-                {COMPANY_DETAILS.email}
-              </a>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 ml-auto sm:ml-0 font-medium">
-            <a
-              href="tel:0783644383"
-              className="flex items-center gap-1 px-2 py-0.5 rounded bg-[#163323] hover:bg-[#c59e47] hover:text-[#0e1f15] transition-all text-[#e8ca6b]"
-              title="Skakel Frans van Wyk"
-            >
-              <Phone className="w-3 h-3" />
-              <span>Frans: 078 364 4383</span>
-            </a>
-            <a
-              href="tel:0810883945"
-              className="hidden lg:flex items-center gap-1 px-2 py-0.5 rounded bg-[#163323] hover:bg-[#c59e47] hover:text-[#0e1f15] transition-all text-[#e8ca6b]"
-              title="Skakel Steven"
-            >
-              <Phone className="w-3 h-3" />
-              <span>Steven: 081 088 3945</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <nav
         className={`transition-all duration-300 ${
           isScrolled
             ? 'bg-[#0f2318]/95 backdrop-blur-md shadow-xl border-b border-[#c59e47]/30 py-2.5'
-            : 'bg-[#0f2318]/85 backdrop-blur-sm border-b border-[#c59e47]/20 py-3.5'
+            : 'bg-[#0f2318]/85 backdrop-blur-sm border-b border-[#c59e47]/20 py-3 sm:py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">

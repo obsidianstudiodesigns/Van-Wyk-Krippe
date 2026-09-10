@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Phone, Mail, MapPin, ArrowUp, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, ShieldCheck, ExternalLink } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/products';
 
 interface FooterProps {
@@ -132,13 +132,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-          <p>
-            &copy; {new Date().getFullYear()} <strong>Van Wyk Krippe</strong>. All Rights Reserved. Built with pride for South African livestock farming.
+        {/* Bottom Bar with Credits and Obsidian Studio Designs Attribution */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+          <p className="text-center md:text-left">
+            &copy; {new Date().getFullYear()} <strong className="text-neutral-200">Van Wyk Krippe</strong>. All Rights Reserved. Built with pride for South African livestock farming.
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            {/* Designed by Obsidian Studio Designs */}
+            <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#12241a] border border-[#c59e47]/30 text-neutral-300 shadow-sm">
+              <span className="text-[11px] uppercase tracking-wider text-neutral-400">Designed by</span>
+              <a
+                href="https://obsidianstudiodesigns.co.za/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#e8ca6b] hover:text-white transition-colors underline decoration-[#c59e47]/60 underline-offset-2 hover:decoration-white inline-flex items-center gap-1"
+                title="Visit Obsidian Studio Designs"
+              >
+                <span>Obsidian Studio Designs</span>
+                <ExternalLink className="w-3.5 h-3.5 text-[#c59e47]" />
+              </a>
+            </div>
+
             <button
               onClick={scrollToTop}
               className="flex items-center gap-1.5 text-[#c59e47] hover:text-white transition-colors cursor-pointer"
